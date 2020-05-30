@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmlakOtomasyon", "EmlakOtomasyon\EmlakOtomasyon.csproj", "{DA511877-1128-4BEA-8572-ABAD32C86D08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA511877-1128-4BEA-8572-ABAD32C86D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA511877-1128-4BEA-8572-ABAD32C86D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA511877-1128-4BEA-8572-ABAD32C86D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA511877-1128-4BEA-8572-ABAD32C86D08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49A0ADED-E432-4D5B-9ABF-D2FB969A121B}
+	EndGlobalSection
+EndGlobal

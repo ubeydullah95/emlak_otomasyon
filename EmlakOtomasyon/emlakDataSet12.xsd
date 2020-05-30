@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="emlakDataSet12" targetNamespace="http://tempuri.org/emlakDataSet12.xsd" xmlns:mstns="http://tempuri.org/emlakDataSet12.xsd" xmlns="http://tempuri.org/emlakDataSet12.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="emlakConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="emlakConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EmlakOtomasyon.Properties.Settings.GlobalReference.Default.emlakConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IptalIslemiTableAdapter" GeneratorDataComponentClassName="IptalIslemiTableAdapter" Name="IptalIslemi" UserDataComponentName="IptalIslemiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="emlakConnectionString (Settings)" DbObjectName="emlak.dbo.IptalIslemi" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Emlak_Id, Emlak_Tip, Musteri_Id, AdSoyad, Fiyat, Satis_Fiyati, Il_Adi, Ilce_Adi, Mahalle_Adi FROM dbo.IptalIslemi</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Emlak_Id" DataSetColumn="Emlak_Id" />
+              <Mapping SourceColumn="Emlak_Tip" DataSetColumn="Emlak_Tip" />
+              <Mapping SourceColumn="Musteri_Id" DataSetColumn="Musteri_Id" />
+              <Mapping SourceColumn="AdSoyad" DataSetColumn="AdSoyad" />
+              <Mapping SourceColumn="Fiyat" DataSetColumn="Fiyat" />
+              <Mapping SourceColumn="Satis_Fiyati" DataSetColumn="Satis_Fiyati" />
+              <Mapping SourceColumn="Il_Adi" DataSetColumn="Il_Adi" />
+              <Mapping SourceColumn="Ilce_Adi" DataSetColumn="Ilce_Adi" />
+              <Mapping SourceColumn="Mahalle_Adi" DataSetColumn="Mahalle_Adi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="emlakDataSet12" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="emlakDataSet12" msprop:Generator_UserDSName="emlakDataSet12">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="IptalIslemi" msprop:Generator_TableClassName="IptalIslemiDataTable" msprop:Generator_TableVarName="tableIptalIslemi" msprop:Generator_TablePropName="IptalIslemi" msprop:Generator_RowDeletingName="IptalIslemiRowDeleting" msprop:Generator_RowChangingName="IptalIslemiRowChanging" msprop:Generator_RowEvHandlerName="IptalIslemiRowChangeEventHandler" msprop:Generator_RowDeletedName="IptalIslemiRowDeleted" msprop:Generator_UserTableName="IptalIslemi" msprop:Generator_RowChangedName="IptalIslemiRowChanged" msprop:Generator_RowEvArgName="IptalIslemiRowChangeEvent" msprop:Generator_RowClassName="IptalIslemiRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Emlak_Id" msprop:Generator_ColumnVarNameInTable="columnEmlak_Id" msprop:Generator_ColumnPropNameInRow="Emlak_Id" msprop:Generator_ColumnPropNameInTable="Emlak_IdColumn" msprop:Generator_UserColumnName="Emlak_Id" type="xs:int" />
+              <xs:element name="Emlak_Tip" msprop:Generator_ColumnVarNameInTable="columnEmlak_Tip" msprop:Generator_ColumnPropNameInRow="Emlak_Tip" msprop:Generator_ColumnPropNameInTable="Emlak_TipColumn" msprop:Generator_UserColumnName="Emlak_Tip" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Musteri_Id" msprop:Generator_ColumnVarNameInTable="columnMusteri_Id" msprop:Generator_ColumnPropNameInRow="Musteri_Id" msprop:Generator_ColumnPropNameInTable="Musteri_IdColumn" msprop:Generator_UserColumnName="Musteri_Id" type="xs:int" />
+              <xs:element name="AdSoyad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAdSoyad" msprop:Generator_ColumnPropNameInRow="AdSoyad" msprop:Generator_ColumnPropNameInTable="AdSoyadColumn" msprop:Generator_UserColumnName="AdSoyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fiyat" msprop:Generator_ColumnVarNameInTable="columnFiyat" msprop:Generator_ColumnPropNameInRow="Fiyat" msprop:Generator_ColumnPropNameInTable="FiyatColumn" msprop:Generator_UserColumnName="Fiyat" type="xs:int" minOccurs="0" />
+              <xs:element name="Satis_Fiyati" msprop:Generator_ColumnVarNameInTable="columnSatis_Fiyati" msprop:Generator_ColumnPropNameInRow="Satis_Fiyati" msprop:Generator_ColumnPropNameInTable="Satis_FiyatiColumn" msprop:Generator_UserColumnName="Satis_Fiyati" type="xs:int" minOccurs="0" />
+              <xs:element name="Il_Adi" msprop:Generator_ColumnVarNameInTable="columnIl_Adi" msprop:Generator_ColumnPropNameInRow="Il_Adi" msprop:Generator_ColumnPropNameInTable="Il_AdiColumn" msprop:Generator_UserColumnName="Il_Adi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ilce_Adi" msprop:Generator_ColumnVarNameInTable="columnIlce_Adi" msprop:Generator_ColumnPropNameInRow="Ilce_Adi" msprop:Generator_ColumnPropNameInTable="Ilce_AdiColumn" msprop:Generator_UserColumnName="Ilce_Adi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mahalle_Adi" msprop:Generator_ColumnVarNameInTable="columnMahalle_Adi" msprop:Generator_ColumnPropNameInRow="Mahalle_Adi" msprop:Generator_ColumnPropNameInTable="Mahalle_AdiColumn" msprop:Generator_UserColumnName="Mahalle_Adi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="kira_emlakview" targetNamespace="http://tempuri.org/kira_emlakview.xsd" xmlns:mstns="http://tempuri.org/kira_emlakview.xsd" xmlns="http://tempuri.org/kira_emlakview.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="emlakConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="emlakConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EmlakOtomasyon.Properties.Settings.GlobalReference.Default.emlakConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kiralanan_emlakTableAdapter" GeneratorDataComponentClassName="kiralanan_emlakTableAdapter" Name="kiralanan_emlak" UserDataComponentName="kiralanan_emlakTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="emlakConnectionString (Settings)" DbObjectName="emlak.dbo.kiralanan_emlak" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Emlak_Id, Fiyat, Musteri_Id, Musteri_Ad, Musteri_Soyad, Tip_Id, Aktif_Pasif, Durum FROM dbo.kiralanan_emlak</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Emlak_Id" DataSetColumn="Emlak_Id" />
+              <Mapping SourceColumn="Fiyat" DataSetColumn="Fiyat" />
+              <Mapping SourceColumn="Musteri_Id" DataSetColumn="Musteri_Id" />
+              <Mapping SourceColumn="Musteri_Ad" DataSetColumn="Musteri_Ad" />
+              <Mapping SourceColumn="Musteri_Soyad" DataSetColumn="Musteri_Soyad" />
+              <Mapping SourceColumn="Tip_Id" DataSetColumn="Tip_Id" />
+              <Mapping SourceColumn="Aktif_Pasif" DataSetColumn="Aktif_Pasif" />
+              <Mapping SourceColumn="Durum" DataSetColumn="Durum" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="emlakConnectionString (Settings)" DbObjectName="emlak.dbo.kiralanan_emlak" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Emlak_Id, Fiyat, Musteri_Id, Musteri_Ad, Musteri_Soyad, Tip_Id, Aktif_Pasif, Durum
+FROM            kiralanan_emlak</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="kira_emlakview" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="kira_emlakview" msprop:Generator_UserDSName="kira_emlakview">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="kiralanan_emlak" msprop:Generator_TableClassName="kiralanan_emlakDataTable" msprop:Generator_TableVarName="tablekiralanan_emlak" msprop:Generator_RowChangedName="kiralanan_emlakRowChanged" msprop:Generator_TablePropName="kiralanan_emlak" msprop:Generator_RowDeletingName="kiralanan_emlakRowDeleting" msprop:Generator_RowChangingName="kiralanan_emlakRowChanging" msprop:Generator_RowEvHandlerName="kiralanan_emlakRowChangeEventHandler" msprop:Generator_RowDeletedName="kiralanan_emlakRowDeleted" msprop:Generator_RowClassName="kiralanan_emlakRow" msprop:Generator_UserTableName="kiralanan_emlak" msprop:Generator_RowEvArgName="kiralanan_emlakRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Emlak_Id" msprop:Generator_ColumnVarNameInTable="columnEmlak_Id" msprop:Generator_ColumnPropNameInRow="Emlak_Id" msprop:Generator_ColumnPropNameInTable="Emlak_IdColumn" msprop:Generator_UserColumnName="Emlak_Id" type="xs:int" />
+              <xs:element name="Fiyat" msprop:Generator_ColumnVarNameInTable="columnFiyat" msprop:Generator_ColumnPropNameInRow="Fiyat" msprop:Generator_ColumnPropNameInTable="FiyatColumn" msprop:Generator_UserColumnName="Fiyat" type="xs:int" minOccurs="0" />
+              <xs:element name="Musteri_Id" msprop:Generator_ColumnVarNameInTable="columnMusteri_Id" msprop:Generator_ColumnPropNameInRow="Musteri_Id" msprop:Generator_ColumnPropNameInTable="Musteri_IdColumn" msprop:Generator_UserColumnName="Musteri_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Musteri_Ad" msprop:Generator_ColumnVarNameInTable="columnMusteri_Ad" msprop:Generator_ColumnPropNameInRow="Musteri_Ad" msprop:Generator_ColumnPropNameInTable="Musteri_AdColumn" msprop:Generator_UserColumnName="Musteri_Ad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Musteri_Soyad" msprop:Generator_ColumnVarNameInTable="columnMusteri_Soyad" msprop:Generator_ColumnPropNameInRow="Musteri_Soyad" msprop:Generator_ColumnPropNameInTable="Musteri_SoyadColumn" msprop:Generator_UserColumnName="Musteri_Soyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tip_Id" msprop:Generator_ColumnVarNameInTable="columnTip_Id" msprop:Generator_ColumnPropNameInRow="Tip_Id" msprop:Generator_ColumnPropNameInTable="Tip_IdColumn" msprop:Generator_UserColumnName="Tip_Id" type="xs:int" minOccurs="0" />
+              <xs:element name="Aktif_Pasif" msprop:Generator_ColumnVarNameInTable="columnAktif_Pasif" msprop:Generator_ColumnPropNameInRow="Aktif_Pasif" msprop:Generator_ColumnPropNameInTable="Aktif_PasifColumn" msprop:Generator_UserColumnName="Aktif_Pasif" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Durum" msprop:Generator_ColumnVarNameInTable="columnDurum" msprop:Generator_ColumnPropNameInRow="Durum" msprop:Generator_ColumnPropNameInTable="DurumColumn" msprop:Generator_UserColumnName="Durum" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:kiralanan_emlak" />
+      <xs:field xpath="mstns:Emlak_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

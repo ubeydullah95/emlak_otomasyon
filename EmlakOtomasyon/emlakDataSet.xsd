@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="emlakDataSet" targetNamespace="http://tempuri.org/emlakDataSet.xsd" xmlns:mstns="http://tempuri.org/emlakDataSet.xsd" xmlns="http://tempuri.org/emlakDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="emlakConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="emlakConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EmlakOtomasyon.Properties.Settings.GlobalReference.Default.emlakConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_1TableAdapter" GeneratorDataComponentClassName="View_1TableAdapter" Name="View_1" UserDataComponentName="View_1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="emlakConnectionString (Settings)" DbObjectName="emlak.dbo.View_1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Emlak_Id, Durum, Emlak_Tip, Fiyat, Il_Adi, Ilce_Adi FROM dbo.View_1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Emlak_Id" DataSetColumn="Emlak_Id" />
+              <Mapping SourceColumn="Durum" DataSetColumn="Durum" />
+              <Mapping SourceColumn="Emlak_Tip" DataSetColumn="Emlak_Tip" />
+              <Mapping SourceColumn="Fiyat" DataSetColumn="Fiyat" />
+              <Mapping SourceColumn="Il_Adi" DataSetColumn="Il_Adi" />
+              <Mapping SourceColumn="Ilce_Adi" DataSetColumn="Ilce_Adi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="emlakDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="emlakDataSet" msprop:Generator_UserDSName="emlakDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_1" msprop:Generator_TableClassName="View_1DataTable" msprop:Generator_TableVarName="tableView_1" msprop:Generator_TablePropName="View_1" msprop:Generator_RowDeletingName="View_1RowDeleting" msprop:Generator_RowChangingName="View_1RowChanging" msprop:Generator_RowEvHandlerName="View_1RowChangeEventHandler" msprop:Generator_RowDeletedName="View_1RowDeleted" msprop:Generator_UserTableName="View_1" msprop:Generator_RowChangedName="View_1RowChanged" msprop:Generator_RowEvArgName="View_1RowChangeEvent" msprop:Generator_RowClassName="View_1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Emlak_Id" msprop:Generator_ColumnVarNameInTable="columnEmlak_Id" msprop:Generator_ColumnPropNameInRow="Emlak_Id" msprop:Generator_ColumnPropNameInTable="Emlak_IdColumn" msprop:Generator_UserColumnName="Emlak_Id" type="xs:int" />
+              <xs:element name="Durum" msprop:Generator_ColumnVarNameInTable="columnDurum" msprop:Generator_ColumnPropNameInRow="Durum" msprop:Generator_ColumnPropNameInTable="DurumColumn" msprop:Generator_UserColumnName="Durum" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Emlak_Tip" msprop:Generator_ColumnVarNameInTable="columnEmlak_Tip" msprop:Generator_ColumnPropNameInRow="Emlak_Tip" msprop:Generator_ColumnPropNameInTable="Emlak_TipColumn" msprop:Generator_UserColumnName="Emlak_Tip" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fiyat" msprop:Generator_ColumnVarNameInTable="columnFiyat" msprop:Generator_ColumnPropNameInRow="Fiyat" msprop:Generator_ColumnPropNameInTable="FiyatColumn" msprop:Generator_UserColumnName="Fiyat" type="xs:int" minOccurs="0" />
+              <xs:element name="Il_Adi" msprop:Generator_ColumnVarNameInTable="columnIl_Adi" msprop:Generator_ColumnPropNameInRow="Il_Adi" msprop:Generator_ColumnPropNameInTable="Il_AdiColumn" msprop:Generator_UserColumnName="Il_Adi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ilce_Adi" msprop:Generator_ColumnVarNameInTable="columnIlce_Adi" msprop:Generator_ColumnPropNameInRow="Ilce_Adi" msprop:Generator_ColumnPropNameInTable="Ilce_AdiColumn" msprop:Generator_UserColumnName="Ilce_Adi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_1" />
+      <xs:field xpath="mstns:Emlak_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

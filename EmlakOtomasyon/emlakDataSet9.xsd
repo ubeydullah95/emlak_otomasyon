@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="emlakDataSet9" targetNamespace="http://tempuri.org/emlakDataSet9.xsd" xmlns:mstns="http://tempuri.org/emlakDataSet9.xsd" xmlns="http://tempuri.org/emlakDataSet9.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="emlakConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="emlakConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EmlakOtomasyon.Properties.Settings.GlobalReference.Default.emlakConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kiraemlakTableAdapter" GeneratorDataComponentClassName="kiraemlakTableAdapter" Name="kiraemlak" UserDataComponentName="kiraemlakTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="emlakConnectionString (Settings)" DbObjectName="emlak.dbo.kiraemlak" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Satis_Fiyati, Fiyat, Emlak_Id, AdSoyad FROM dbo.kiraemlak</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Satis_Fiyati" DataSetColumn="Satis_Fiyati" />
+              <Mapping SourceColumn="Fiyat" DataSetColumn="Fiyat" />
+              <Mapping SourceColumn="Emlak_Id" DataSetColumn="Emlak_Id" />
+              <Mapping SourceColumn="AdSoyad" DataSetColumn="AdSoyad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="satilanemlakTableAdapter" GeneratorDataComponentClassName="satilanemlakTableAdapter" Name="satilanemlak" UserDataComponentName="satilanemlakTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="emlakConnectionString (Settings)" DbObjectName="emlak.dbo.satilanemlak" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Satis_Fiyati, Fiyat, Emlak_Id, AdSoyad FROM dbo.satilanemlak</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Satis_Fiyati" DataSetColumn="Satis_Fiyati" />
+              <Mapping SourceColumn="Fiyat" DataSetColumn="Fiyat" />
+              <Mapping SourceColumn="Emlak_Id" DataSetColumn="Emlak_Id" />
+              <Mapping SourceColumn="AdSoyad" DataSetColumn="AdSoyad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="emlakDataSet9" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="emlakDataSet9" msprop:Generator_UserDSName="emlakDataSet9">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="kiraemlak" msprop:Generator_TableClassName="kiraemlakDataTable" msprop:Generator_TableVarName="tablekiraemlak" msprop:Generator_TablePropName="kiraemlak" msprop:Generator_RowDeletingName="kiraemlakRowDeleting" msprop:Generator_RowChangingName="kiraemlakRowChanging" msprop:Generator_RowEvHandlerName="kiraemlakRowChangeEventHandler" msprop:Generator_RowDeletedName="kiraemlakRowDeleted" msprop:Generator_UserTableName="kiraemlak" msprop:Generator_RowChangedName="kiraemlakRowChanged" msprop:Generator_RowEvArgName="kiraemlakRowChangeEvent" msprop:Generator_RowClassName="kiraemlakRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Satis_Fiyati" msprop:Generator_ColumnVarNameInTable="columnSatis_Fiyati" msprop:Generator_ColumnPropNameInRow="Satis_Fiyati" msprop:Generator_ColumnPropNameInTable="Satis_FiyatiColumn" msprop:Generator_UserColumnName="Satis_Fiyati" type="xs:int" minOccurs="0" />
+              <xs:element name="Fiyat" msprop:Generator_ColumnVarNameInTable="columnFiyat" msprop:Generator_ColumnPropNameInRow="Fiyat" msprop:Generator_ColumnPropNameInTable="FiyatColumn" msprop:Generator_UserColumnName="Fiyat" type="xs:int" minOccurs="0" />
+              <xs:element name="Emlak_Id" msprop:Generator_ColumnVarNameInTable="columnEmlak_Id" msprop:Generator_ColumnPropNameInRow="Emlak_Id" msprop:Generator_ColumnPropNameInTable="Emlak_IdColumn" msprop:Generator_UserColumnName="Emlak_Id" type="xs:int" />
+              <xs:element name="AdSoyad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAdSoyad" msprop:Generator_ColumnPropNameInRow="AdSoyad" msprop:Generator_ColumnPropNameInTable="AdSoyadColumn" msprop:Generator_UserColumnName="AdSoyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="satilanemlak" msprop:Generator_TableClassName="satilanemlakDataTable" msprop:Generator_TableVarName="tablesatilanemlak" msprop:Generator_TablePropName="satilanemlak" msprop:Generator_RowDeletingName="satilanemlakRowDeleting" msprop:Generator_RowChangingName="satilanemlakRowChanging" msprop:Generator_RowEvHandlerName="satilanemlakRowChangeEventHandler" msprop:Generator_RowDeletedName="satilanemlakRowDeleted" msprop:Generator_UserTableName="satilanemlak" msprop:Generator_RowChangedName="satilanemlakRowChanged" msprop:Generator_RowEvArgName="satilanemlakRowChangeEvent" msprop:Generator_RowClassName="satilanemlakRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Satis_Fiyati" msprop:Generator_ColumnVarNameInTable="columnSatis_Fiyati" msprop:Generator_ColumnPropNameInRow="Satis_Fiyati" msprop:Generator_ColumnPropNameInTable="Satis_FiyatiColumn" msprop:Generator_UserColumnName="Satis_Fiyati" type="xs:int" minOccurs="0" />
+              <xs:element name="Fiyat" msprop:Generator_ColumnVarNameInTable="columnFiyat" msprop:Generator_ColumnPropNameInRow="Fiyat" msprop:Generator_ColumnPropNameInTable="FiyatColumn" msprop:Generator_UserColumnName="Fiyat" type="xs:int" minOccurs="0" />
+              <xs:element name="Emlak_Id" msprop:Generator_ColumnVarNameInTable="columnEmlak_Id" msprop:Generator_ColumnPropNameInRow="Emlak_Id" msprop:Generator_ColumnPropNameInTable="Emlak_IdColumn" msprop:Generator_UserColumnName="Emlak_Id" type="xs:int" />
+              <xs:element name="AdSoyad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAdSoyad" msprop:Generator_ColumnPropNameInRow="AdSoyad" msprop:Generator_ColumnPropNameInTable="AdSoyadColumn" msprop:Generator_UserColumnName="AdSoyad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:kiraemlak" />
+      <xs:field xpath="mstns:Emlak_Id" />
+    </xs:unique>
+    <xs:unique name="satilanemlak_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:satilanemlak" />
+      <xs:field xpath="mstns:Emlak_Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

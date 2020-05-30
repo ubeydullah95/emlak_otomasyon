@@ -1,0 +1,431 @@
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Adres]    Script Date: 20.12.2018 13:20:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Adres](
+	[Adres_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Acik_Adres] [nvarchar](250) NULL,
+	[Mahalle_Id] [int] NULL,
+ CONSTRAINT [PK_Adres] PRIMARY KEY CLUSTERED 
+(
+	[Adres_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Adres]  WITH CHECK ADD  CONSTRAINT [FK_Adres_Mahalle] FOREIGN KEY([Mahalle_Id])
+REFERENCES [dbo].[Mahalle] ([Mahalle_Id])
+GO
+
+ALTER TABLE [dbo].[Adres] CHECK CONSTRAINT [FK_Adres_Mahalle]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Bina_Yasi]    Script Date: 20.12.2018 13:20:50 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Bina_Yasi](
+	[Bina_Yas_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Bina_Yas] [nchar](10) NULL,
+ CONSTRAINT [PK_Bina_Yaþi] PRIMARY KEY CLUSTERED 
+(
+	[Bina_Yas_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Diger_Ozellikler]    Script Date: 20.12.2018 13:20:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Diger_Ozellikler](
+	[Diger_Id] [int] IDENTITY(1,1) NOT NULL,
+	[D_Otopark] [bit] NULL,
+	[D_Asansor] [bit] NULL,
+	[D_Guvenlik] [bit] NULL,
+	[D_Havuz] [bit] NULL,
+	[D_Alarm] [bit] NULL,
+ CONSTRAINT [PK_Diger_Ozellikler] PRIMARY KEY CLUSTERED 
+(
+	[Diger_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Emlak_Tipi]    Script Date: 20.12.2018 13:21:10 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Emlak_Tipi](
+	[Tip_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Emlak_Tip] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Emlak_Tipi] PRIMARY KEY CLUSTERED 
+(
+	[Tip_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Ev_Foto]    Script Date: 20.12.2018 13:21:21 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Ev_Foto](
+	[Emlak_Id] [int] NULL,
+	[Foto_Id] [int] NULL
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Ev_Foto]  WITH CHECK ADD  CONSTRAINT [FK_Ev_Foto_Fotograf] FOREIGN KEY([Foto_Id])
+REFERENCES [dbo].[Fotograf] ([Foto_Id])
+GO
+
+ALTER TABLE [dbo].[Ev_Foto] CHECK CONSTRAINT [FK_Ev_Foto_Fotograf]
+GO
+
+ALTER TABLE [dbo].[Ev_Foto]  WITH CHECK ADD  CONSTRAINT [FK_Ev_Foto_Ilanlar] FOREIGN KEY([Emlak_Id])
+REFERENCES [dbo].[Ilanlar] ([Emlak_Id])
+GO
+
+ALTER TABLE [dbo].[Ev_Foto] CHECK CONSTRAINT [FK_Ev_Foto_Ilanlar]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Fotograf]    Script Date: 20.12.2018 13:21:31 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Fotograf](
+	[Foto_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Foto_Konum] [nvarchar](150) NULL,
+ CONSTRAINT [PK_Fotograf] PRIMARY KEY CLUSTERED 
+(
+	[Foto_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Il]    Script Date: 20.12.2018 13:21:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Il](
+	[Il_Id] [int] NOT NULL,
+	[Il_Adi] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Il] PRIMARY KEY CLUSTERED 
+(
+	[Il_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Ilanlar]    Script Date: 20.12.2018 13:22:11 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Ilanlar](
+	[Emlak_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Durum] [bit] NULL,
+	[Tip_Id] [int] NULL,
+	[Fiyat] [int] NULL,
+	[Ozellik_Id] [int] NULL,
+	[Adres_Id] [int] NULL,
+	[Aciklama] [nvarchar](200) NULL,
+	[Diger_Id] [int] NULL,
+	[Aktif_Pasif] [bit] NULL,
+ CONSTRAINT [PK_Ilanlar] PRIMARY KEY CLUSTERED 
+(
+	[Emlak_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Ilanlar]  WITH CHECK ADD  CONSTRAINT [FK_Ilanlar_Adres] FOREIGN KEY([Adres_Id])
+REFERENCES [dbo].[Adres] ([Adres_Id])
+GO
+
+ALTER TABLE [dbo].[Ilanlar] CHECK CONSTRAINT [FK_Ilanlar_Adres]
+GO
+
+ALTER TABLE [dbo].[Ilanlar]  WITH CHECK ADD  CONSTRAINT [FK_Ilanlar_Diger_Ozellikler] FOREIGN KEY([Diger_Id])
+REFERENCES [dbo].[Diger_Ozellikler] ([Diger_Id])
+GO
+
+ALTER TABLE [dbo].[Ilanlar] CHECK CONSTRAINT [FK_Ilanlar_Diger_Ozellikler]
+GO
+
+ALTER TABLE [dbo].[Ilanlar]  WITH CHECK ADD  CONSTRAINT [FK_Ilanlar_Emlak_Tipi] FOREIGN KEY([Tip_Id])
+REFERENCES [dbo].[Emlak_Tipi] ([Tip_Id])
+GO
+
+ALTER TABLE [dbo].[Ilanlar] CHECK CONSTRAINT [FK_Ilanlar_Emlak_Tipi]
+GO
+
+ALTER TABLE [dbo].[Ilanlar]  WITH CHECK ADD  CONSTRAINT [FK_Ilanlar_Ozellikler] FOREIGN KEY([Ozellik_Id])
+REFERENCES [dbo].[Ozellikler] ([Ozellik_Id])
+GO
+
+ALTER TABLE [dbo].[Ilanlar] CHECK CONSTRAINT [FK_Ilanlar_Ozellikler]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Ilce]    Script Date: 20.12.2018 13:22:19 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Ilce](
+	[Ilce_Id] [int] NOT NULL,
+	[Ilce_Adi] [nvarchar](50) NULL,
+	[Il_Id] [int] NULL,
+ CONSTRAINT [PK_Ilce] PRIMARY KEY CLUSTERED 
+(
+	[Ilce_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Ilce]  WITH CHECK ADD  CONSTRAINT [FK_Ilce_Il] FOREIGN KEY([Il_Id])
+REFERENCES [dbo].[Il] ([Il_Id])
+GO
+
+ALTER TABLE [dbo].[Ilce] CHECK CONSTRAINT [FK_Ilce_Il]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Isitma]    Script Date: 20.12.2018 13:22:28 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Isitma](
+	[Isitma_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Isitma_Turu] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Isitma] PRIMARY KEY CLUSTERED 
+(
+	[Isitma_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Kayitlar]    Script Date: 20.12.2018 13:22:35 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Kayitlar](
+	[Musteri_Id] [int] NULL,
+	[Emlak_Id] [int] NULL,
+	[A_Tarih] [date] NULL,
+	[V_Tarih] [date] NULL,
+	[Satis_Fiyati] [int] NULL
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Kayitlar]  WITH CHECK ADD  CONSTRAINT [FK_Kayitlar_Ilanlar] FOREIGN KEY([Emlak_Id])
+REFERENCES [dbo].[Ilanlar] ([Emlak_Id])
+GO
+
+ALTER TABLE [dbo].[Kayitlar] CHECK CONSTRAINT [FK_Kayitlar_Ilanlar]
+GO
+
+ALTER TABLE [dbo].[Kayitlar]  WITH CHECK ADD  CONSTRAINT [FK_Kayitlar_Musteriler] FOREIGN KEY([Musteri_Id])
+REFERENCES [dbo].[Musteriler] ([Musteri_Id])
+GO
+
+ALTER TABLE [dbo].[Kayitlar] CHECK CONSTRAINT [FK_Kayitlar_Musteriler]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Mahalle]    Script Date: 20.12.2018 13:22:44 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Mahalle](
+	[Mahalle_Id] [int] NOT NULL,
+	[Mahalle_Adi] [nvarchar](50) NULL,
+	[Ilce_Id] [int] NULL,
+ CONSTRAINT [PK_Mahalle] PRIMARY KEY CLUSTERED 
+(
+	[Mahalle_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Mahalle]  WITH CHECK ADD  CONSTRAINT [FK_Mahalle_Ilce] FOREIGN KEY([Ilce_Id])
+REFERENCES [dbo].[Ilce] ([Ilce_Id])
+GO
+
+ALTER TABLE [dbo].[Mahalle] CHECK CONSTRAINT [FK_Mahalle_Ilce]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Musteriler]    Script Date: 20.12.2018 13:22:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Musteriler](
+	[Musteri_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Musteri_Ad] [nvarchar](50) NULL,
+	[Musteri_Soyad] [nvarchar](50) NULL,
+	[Musteri_Tel] [nvarchar](50) NULL,
+	[Musteri_Mail] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Musteriler] PRIMARY KEY CLUSTERED 
+(
+	[Musteri_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Oda_Sayisi]    Script Date: 20.12.2018 13:23:05 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Oda_Sayisi](
+	[Oda_Sayi_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Oda_Sayi] [nchar](10) NULL,
+ CONSTRAINT [PK_Oda_Sayisi] PRIMARY KEY CLUSTERED 
+(
+	[Oda_Sayi_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [emlak]
+GO
+
+/****** Object:  Table [dbo].[Ozellikler]    Script Date: 20.12.2018 13:23:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Ozellikler](
+	[Ozellik_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Ev_Metre] [int] NULL,
+	[Oda_Sayi_Id] [int] NULL,
+	[Banyo_Sayisi] [int] NULL,
+	[Bina_Yas_Id] [int] NULL,
+	[Bulundugu_Kat] [int] NULL,
+	[Isitma_Id] [int] NULL,
+	[Ev_Esya] [bit] NULL,
+ CONSTRAINT [PK_Ozellikler] PRIMARY KEY CLUSTERED 
+(
+	[Ozellik_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Ozellikler]  WITH CHECK ADD  CONSTRAINT [FK_Ozellikler_Bina_Yaþi] FOREIGN KEY([Bina_Yas_Id])
+REFERENCES [dbo].[Bina_Yasi] ([Bina_Yas_Id])
+GO
+
+ALTER TABLE [dbo].[Ozellikler] CHECK CONSTRAINT [FK_Ozellikler_Bina_Yaþi]
+GO
+
+ALTER TABLE [dbo].[Ozellikler]  WITH CHECK ADD  CONSTRAINT [FK_Ozellikler_Isitma] FOREIGN KEY([Isitma_Id])
+REFERENCES [dbo].[Isitma] ([Isitma_Id])
+GO
+
+ALTER TABLE [dbo].[Ozellikler] CHECK CONSTRAINT [FK_Ozellikler_Isitma]
+GO
+
+ALTER TABLE [dbo].[Ozellikler]  WITH CHECK ADD  CONSTRAINT [FK_Ozellikler_Oda_Sayisi] FOREIGN KEY([Oda_Sayi_Id])
+REFERENCES [dbo].[Oda_Sayisi] ([Oda_Sayi_Id])
+GO
+
+ALTER TABLE [dbo].[Ozellikler] CHECK CONSTRAINT [FK_Ozellikler_Oda_Sayisi]
+GO
+
+
